@@ -20,6 +20,7 @@ HINT: Some products can be obtained in more than one way so be sure to only incl
 */
 
 // this ignore 1 and itself because this cant happen with this problem
+
 func factors(f : Int) -> [Int]
 {
     var rval = [Int]()
@@ -46,6 +47,9 @@ func digits(var num : Int, var status : [Bool]) -> (Bool, [Bool])
         num = num / 10
     } while num != 0
     
+    if status[0] == true {
+        fail = true
+    }
     return (fail,status)
 }
 
@@ -112,35 +116,72 @@ func permute(var str : [Int]) -> (Bool,[Int])
     return (true,str)
 }
 
-/*
-var test  = [1,2,3]
 
-/* A short test loop to print each permutation, which are
-created in sorted order.                                */
-
-var rval=(true,[1])
-do  {
-    println(test)
-    rval = permute(test)
-    test = rval.1
-    
-}
-while rval.0
-*/
-
+var results = [Int:Int]()
 var status = [Bool]()
-// dont try to factor them all... only try the ones that might work
 
-let max = 123456789
+let max = 9999999
 var count = 0
-for var i=1000;i<max;i++
+
+for var i=2;i<max;i++
 {
     status = [Bool](count:10, repeatedValue: false)
+    
     var rval = digits(i,status)
+    
     if rval.0 == false {
         
-        //count = count + factors(i).count
+        var leftOver = [Int]()
+        
+        for var j=1;j<10;j++ {
+            if rval.1[j] == false {
+                leftOver.append(j)
+            }
+            
+        }
+        
+        var result=(true,[1])
+        
+        do
+        {
+            
+            for var line = 1 ; line <  leftOver.count; line++ {
+                // create the first half and the second half
+                var firstHalf = 0
+                var secondHalf = 0
+                
+                for var j = 0 ; j < line ; j=j+1 {
+                    var t1 = Int(pow(10.0,Double(line-j-1))) * leftOver[j]
+                    firstHalf = firstHalf + t1
+                }
+                
+                for var j = line ; j < leftOver.count ; j++
+                {
+                    var t1 = Int(pow(10.0,Double(leftOver.count-j - 1))) * leftOver[j]
+                    secondHalf = secondHalf + t1
+                }
+            
+                if firstHalf * secondHalf == i
+                {
+                    results[i] = i
+                    println("Found: \(firstHalf) * \(secondHalf) = \(i)")
+                }
+                
+            }
+            
+            
+            result = permute(leftOver)
+            leftOver = result.1
+        }
+        while result.0
+        
+        
     }
 }
-println(count)
-*/
+
+var sum = 0
+for i in results {
+    sum = sum + i.0
+}
+
+println("Done sum=\(sum)")
