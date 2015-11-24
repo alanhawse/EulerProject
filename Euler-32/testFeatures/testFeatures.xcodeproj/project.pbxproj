@@ -88,6 +88,8 @@
 		3E7692D51BCB29E400E6A7B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Alan Hawse";
 				TargetAttributes = {
@@ -236,6 +238,7 @@
 				3E7692E61BCB29E500E6A7B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

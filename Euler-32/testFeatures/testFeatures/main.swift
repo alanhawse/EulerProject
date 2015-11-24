@@ -8,5 +8,35 @@
 
 import Foundation
 
-println("Hello, World!")
+print("Hello, World!")
+
+enum TestError: ErrorType {
+    case Type1
+    case Type2
+}
+
+func t1(x: Int?) throws  {
+    
+
+    guard let b=x else {
+        print("Error")
+        throw TestError.Type2
+    }
+    var d : Int?
+    d=b
+    print(d)
+    print(b)
+
+}
+
+do {
+    
+    try t1(nil)
+}
+catch TestError.Type1 {
+    print("Type 1")
+}
+catch TestError.Type2 {
+    print("Type 2")
+}
 
