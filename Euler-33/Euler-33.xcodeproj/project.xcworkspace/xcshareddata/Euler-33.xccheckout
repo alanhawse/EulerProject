@@ -7,17 +7,17 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F21BF497-7BB5-4BDC-880C-DA1A26B89DDA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Euler-33</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B42E73828D57D35F8FAAAA2EAA486888CE4A41B4</key>
+		<key>86AE31C6A56114299D7F223251AED9FAF4111A64</key>
 		<string>github.com:alanhawse/EulerProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Euler-33/Euler-33.xcodeproj/project.xcworkspace</string>
+	<string>Euler-33/Euler-33.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B42E73828D57D35F8FAAAA2EAA486888CE4A41B4</key>
+		<key>86AE31C6A56114299D7F223251AED9FAF4111A64</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B42E73828D57D35F8FAAAA2EAA486888CE4A41B4</string>
+	<string>86AE31C6A56114299D7F223251AED9FAF4111A64</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B42E73828D57D35F8FAAAA2EAA486888CE4A41B4</string>
+			<string>86AE31C6A56114299D7F223251AED9FAF4111A64</string>
 			<key>IDESourceControlWCCName</key>
 			<string>EulerProject</string>
 		</dict>
